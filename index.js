@@ -1,9 +1,10 @@
 const express = require('express')
+const passport = require('passport')
+//GoogStrat, that's short for GoogleStrategy yay
+const GoogStrat = require('passport-google-oatuh20').Strategy
 const app = express()
 
-app.get('/', (req, res) => {
-	res.send({hey: 'fool'})
-})
+passport.use(new GoogStrat())
 
 
 const PORT = process.env.PORT || 4200
