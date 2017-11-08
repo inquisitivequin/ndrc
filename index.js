@@ -3,6 +3,7 @@ const passport = require('passport')
 //GoogStrat, that's short for GoogleStrategy yay
 const GoogStrat = require('passport-google-oatuh20').Strategy
 const app = express()
+const keys = require('./config/keys')
 
 
 passport.use(new GoogleStrat({
