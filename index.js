@@ -13,20 +13,19 @@ passport.use(
 	    callbackURL: 'auth/google/callback'
 	  },
 	    accessToken => {
-	    	console.log(accessToken)
+	    	console.log('access Token', accessToken)
+	    	
 	  })
 	);
 
 
 app.get(
-	'/auth/google', 
-	passport.authenticate('google',
-		{ scope: ['profile', 'email']
-	})
-);
+	'auth/google', 
+	passport.authenticate('google', {
+		scope: ['profile', 'email']
+}))
 
-app.get('/auth/auth/google/callback',
-	passport.authenticate('google'))
+ 
 
 
 const PORT = process.env.PORT || 4200
