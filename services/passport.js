@@ -6,7 +6,7 @@ passport.use(
 	new GoogleStrategy({
 	    clientID: keys.googleClientID,
 	    clientSecret: keys.googleClientSecret,
-	    callbackURL: 'http://localhost:4200/auth/google/callback'
+	    callbackURL: '/auth/google/callback'
 	  },
 	    (accessToken, refreshToken, profile, done) => {
 	    	console.log('access token', accessToken)
